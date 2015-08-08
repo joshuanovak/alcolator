@@ -35,6 +35,7 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     //NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPrecentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 }
 
 - (IBAction)buttonPressed:(id)sender {
@@ -67,7 +68,6 @@
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil),numberOfBeers, beerText, [self.beerPrecentTextField.text floatValue], numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     self.resultLabel.text = resultText;
     //NSLog(@"Slider value changed to %@", resultText);
-    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Wine (%.1f %@)", "Wine Title Bar"),numberOfWineGlassesForEquivalentAlcoholAmount,wineText];
 
 
 }

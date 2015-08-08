@@ -48,8 +48,6 @@
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of whiskey.", nil),numberOfBeers, beerText, [self.beerPrecentTextField.text floatValue], numberOfWhiskeyGlassesForEquivalentAlcoholAmount, whiskeyText];
     self.resultLabel.text = resultText;
     
-    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Whiskey (%.1f %@)", "Wine Title Bar"),numberOfWhiskeyGlassesForEquivalentAlcoholAmount,whiskeyText];
-        
 }
 
 
